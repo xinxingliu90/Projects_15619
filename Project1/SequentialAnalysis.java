@@ -67,7 +67,7 @@ public class SequentialAnalysis {
 		Scanner sc = null;
 		
 		try {
-			inputStream = new FileInputStream("../" + inputFile);
+			inputStream = new FileInputStream(inputFile);
 			sc = new Scanner(inputStream, "ASCII");
 			String line, suffix, title;
 			Integer access;
@@ -142,7 +142,7 @@ public class SequentialAnalysis {
 			sortedAccessCount.putAll(accessCount);
 		
 			//write to file
-			File file = new File("../output/" + outputFile);  
+			File file = new File(outputFile);  
 			FileOutputStream fos = new FileOutputStream(file);  
 	        OutputStreamWriter osw = new OutputStreamWriter(fos);          
 	        BufferedWriter bw = new BufferedWriter(osw);  
@@ -158,7 +158,7 @@ public class SequentialAnalysis {
 			System.out.println("Done.");
 			System.out.println("Total lines before filtering : " + lineNum);
 			System.out.println("Total number of requests made before filtering : " + totalCount);
-			System.out.println("After filtering, " + accessCount.size() + " records have been writen to file \"output/" + outputFile + "\".");
+			System.out.println("After filtering, " + accessCount.size() + " records have been writen to file \"" + outputFile + "\".");
 			
 		} catch (IOException e) {
 			System.out.println("input file does not exist!");

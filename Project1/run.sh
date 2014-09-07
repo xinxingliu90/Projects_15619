@@ -1,2 +1,2 @@
-cd bin
-java -jar analysis.jar "$@"
+javac SequentialAnalysis.java
+java SequentialAnalysis "$@"
