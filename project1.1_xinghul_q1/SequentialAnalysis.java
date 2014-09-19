@@ -61,7 +61,6 @@ public class SequentialAnalysis {
 		ValueComparator comparator = new ValueComparator(accessCount);
 		TreeMap<String, Integer> sortedAccessCount = 
 				new TreeMap<String, Integer>(comparator);
-		
 		//input and output stream
 		FileInputStream inputStream = null;
 		Scanner sc = null;
