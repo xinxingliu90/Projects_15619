@@ -1,0 +1,15 @@
+Fri Sep 19 18:32:00 UTC 2014
+Test launched. Check every minute for an update
+Requests per second:    516.12 [#/sec] (mean)
+Requests per second:    1128.39 [#/sec] (mean)
+Requests per second:    1125.02 [#/sec] (mean)
+Requests per second:    1132.67 [#/sec] (mean)
+Requests per second:    1169.16 [#/sec] (mean)
+Test completed
+
+avg. 1014.272
+price. 4.4cents/hr
+
+829859
+
+CPU 99.8

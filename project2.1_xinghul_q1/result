@@ -1,0 +1,118 @@
+Sun Sep 21 17:22:54 UTC 2014
+Test launched. Check every minute for an update
+minute 1:
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second:    555.72 [#/sec] (mean)
+----------------------
+minute 2:
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second:    916.05 [#/sec] (mean)
+----------------------
+minute 3:
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second:    908.76 [#/sec] (mean)
+----------------------
+minute 4:
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second:    913.06 [#/sec] (mean)
+----------------------
+minute 5:
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second:    905.59 [#/sec] (mean)
+----------------------
+minute 6:
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second:    901.71 [#/sec] (mean)
+----------------------
+minute 7:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    551.70 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 856.77 [#/sec] (mean)
+----------------------
+minute 8:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    875.42 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 839.48 [#/sec] (mean)
+----------------------
+minute 9:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    873.31 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 862.40 [#/sec] (mean)
+----------------------
+minute 10:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    864.65 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 858.20 [#/sec] (mean)
+----------------------
+minute 11:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    874.17 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 866.32 [#/sec] (mean)
+----------------------
+minute 12:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    875.45 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 853.22 [#/sec] (mean)
+----------------------
+minute 13:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    850.22 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 536.75 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 832.82 [#/sec] (mean)
+----------------------
+minute 14:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    848.99 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 853.86 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 840.53 [#/sec] (mean)
+----------------------
+minute 15:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    850.23 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 849.67 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 836.74 [#/sec] (mean)
+----------------------
+minute 16:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    845.07 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 838.41 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 843.34 [#/sec] (mean)
+----------------------
+minute 17:
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second:    845.83 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 845.06 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 844.07 [#/sec] (mean)
+----------------------
+minute 18:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    539.11 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 828.22 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 813.28 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 804.52 [#/sec] (mean)
+----------------------
+minute 19:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    838.52 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 833.29 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 819.93 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 823.08 [#/sec] (mean)
+----------------------
+minute 20:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    820.13 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 820.25 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 814.42 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 808.83 [#/sec] (mean)
+----------------------
+minute 21:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    822.10 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 829.77 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 819.24 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 821.29 [#/sec] (mean)
+----------------------
+minute 22:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    823.01 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 827.25 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 824.19 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 824.08 [#/sec] (mean)
+----------------------
+minute 23:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    828.36 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 829.49 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 815.93 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 817.93 [#/sec] (mean)
+----------------------
+minute 24:
+ec2-54-164-174-115.compute-1.amazonaws.com: Requests per second:    808.50 [#/sec] (mean)
+ec2-54-164-207-155.compute-1.amazonaws.com: Requests per second: 808.20 [#/sec] (mean)
+ec2-54-165-225-214.compute-1.amazonaws.com: Requests per second: 797.43 [#/sec] (mean)
+ec2-54-165-48-87.compute-1.amazonaws.com: Requests per second: 475.33 [#/sec] (mean)
+ec2-54-86-22-204.compute-1.amazonaws.com: Requests per second: 788.04 [#/sec] (mean)
+----------------------
+RESULT: YOU HAVE REACHED THE GOAL SUCCESSFULLY IN 24 MINUTES. PLEASE ENTER THE FOLLOWING CERTIFICATION CODE TO OLI
+35473c8475b6
+----------------------
+Test completed
+
+sum = 3677.5

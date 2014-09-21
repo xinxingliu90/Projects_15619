@@ -2,6 +2,7 @@ require('dotenv').load();
 var instance = require('./instance');
 var sleep = require('sleep');
 var request = require('request');
+var fs = require('fs');
 
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1';
@@ -37,7 +38,7 @@ instance.launch('ami-1810b270', 'Load Generator', function (dns1) {
 
 
 function checkRPS() {
-    console.log("=======================checking RPS start========================");
+    console.error("=======================checking RPS start========================");
     request('http://' + generatorDNS + '/view-logs?name=result_xinghul_' + testId + '.txt', function (err, res, body) {
         var sum = 0;
         dataDNS.forEach(function (dns) {
@@ -48,14 +49,15 @@ function checkRPS() {
         });
         console.log("sum", sum);
         if (sum < 3600) {
+            console.warn("Needs more data centers.");
             instance.launch('ami-324ae85a', 'Data Center', function (dns) {
                 dataDNS.push(dns);
                 console.log("Registering", dns);
                 request('http://' + generatorDNS + '/part/one/i/want/more?dns=' + dns + '&testId=' + testId, function (err, res, body) {
                     if (!err) {
                         console.log(dns, "has been registered on Load Generator!");
-                        console.log("=======================checking RPS end========================");
-                        console.log("Waiting for next check...");
+                        console.error("=======================checking RPS end========================");
+                        console.warn("Waiting for next check...");
                         sleep.sleep(120);
                         checkRPS();
                     }
@@ -63,7 +65,16 @@ function checkRPS() {
             });
         }
         else {
-            console.log("Goal reached with sum", sum);
+            console.warn("Goal reached with sum", sum);
+            console.warn("Here's the full log:");
+            console.log(body);
+            fs.writeFile("result", body, function (err) {
+                if(err) {
+                    console.log(err);
+                } else {
+                    console.log("The file was saved!");
+                }
+            }); 
         }
     });
 }
