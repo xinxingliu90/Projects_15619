@@ -1,0 +1,117 @@
+Sun Sep 28 21:23:06 UTC 2014
+Test launched. Check every minute for an update
+After test completed, please enter this traffic pattern token 47f8a718198b to OLI for this week's checkpoint
+minute:1
+BONUS
+Requests per second: 2155.53 [#/sec] (mean)
+minute:2
+Requests per second: 869.58 [#/sec] (mean)
+minute:3
+BONUS
+Requests per second: 1823.39 [#/sec] (mean)
+minute:4
+BONUS
+Requests per second: 2002.71 [#/sec] (mean)
+minute:5
+Requests per second: 1048.20 [#/sec] (mean)
+minute:6
+BONUS
+Requests per second: 3363.40 [#/sec] (mean)
+minute:7
+Requests per second: 1298.68 [#/sec] (mean)
+minute:8
+BONUS
+Requests per second: 2317.80 [#/sec] (mean)
+minute:9
+Requests per second: 1442.83 [#/sec] (mean)
+minute:10
+BONUS
+Requests per second: 2311.67 [#/sec] (mean)
+minute:11
+BONUS
+Requests per second: 2568.03 [#/sec] (mean)
+minute:12
+Requests per second: 960.42 [#/sec] (mean)
+minute:13
+Requests per second: 1242.20 [#/sec] (mean)
+minute:14
+Requests per second: 1299.61 [#/sec] (mean)
+minute:15
+BONUS
+Requests per second: 1645.44 [#/sec] (mean)
+minute:16
+BONUS
+Requests per second: 1727.56 [#/sec] (mean)
+minute:17
+BONUS
+Requests per second: 2803.40 [#/sec] (mean)
+minute:18
+BONUS
+Requests per second: 2797.45 [#/sec] (mean)
+minute:19
+BONUS
+Requests per second: 2596.07 [#/sec] (mean)
+minute:20
+BONUS
+Requests per second: 2295.12 [#/sec] (mean)
+minute:21
+Requests per second: 687.76 [#/sec] (mean)
+minute:22
+BONUS
+Requests per second: 2749.61 [#/sec] (mean)
+minute:23
+BONUS
+Requests per second: 2313.78 [#/sec] (mean)
+minute:24
+BONUS
+Requests per second: 2573.34 [#/sec] (mean)
+minute:25
+BONUS
+Requests per second: 2428.55 [#/sec] (mean)
+minute:26
+BONUS
+Requests per second: 2325.14 [#/sec] (mean)
+minute:27
+BONUS
+Requests per second: 2382.95 [#/sec] (mean)
+minute:28
+BONUS
+Requests per second: 1986.68 [#/sec] (mean)
+minute:29
+BONUS
+Requests per second: 1999.54 [#/sec] (mean)
+minute:30
+BONUS
+Requests per second: 1779.38 [#/sec] (mean)
+minute:31
+BONUS
+Requests per second: 1986.58 [#/sec] (mean)
+minute:32
+BONUS
+Requests per second: 1864.40 [#/sec] (mean)
+minute:33
+BONUS
+Requests per second: 2332.68 [#/sec] (mean)
+minute:34
+BONUS
+Requests per second: 2224.27 [#/sec] (mean)
+minute:35
+BONUS
+Requests per second: 2015.25 [#/sec] (mean)
+minute:36
+BONUS
+Requests per second: 2719.05 [#/sec] (mean)
+minute:37
+BONUS
+Requests per second: 2568.05 [#/sec] (mean)
+minute:38
+BONUS
+Requests per second: 2735.99 [#/sec] (mean)
+minute:39
+BONUS
+Requests per second: 2675.30 [#/sec] (mean)
+minute:40
+BONUS
+Requests per second: 2629.34 [#/sec] (mean)
+Test completed
+Total Bonus Minutes: 32  Average rps: 2088  Certification token: 0cb8da75dec8
