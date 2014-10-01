@@ -29,7 +29,7 @@
         };
         ec2.runInstances(params, function (err, data) {
             if (err) { 
-                console.log(err, err.stack); 
+                deferred.reject(err);
             }
             else {
                 var instanceId = data.Instances[0].InstanceId;
@@ -52,7 +52,7 @@
         };
         ec2.createTags(params, function (err) {
             if (err) {
-                console.log(err, err.stack);
+                deferred.reject(err);
             }
             else {
                 console.log("Waiting for instance " + instanceId, "to finish status check...");
@@ -74,7 +74,7 @@
         };
         ec2.describeInstances(param, function (err, data) {
             if (err)
-                console.log(err, err.stack);
+                deferred.reject(err);
             else {
                 var dns = data.Reservations[0].Instances[0].PublicDnsName;
                 if ([undefined, null].indexOf(dns) == -1) {

@@ -33,7 +33,7 @@
         };
         cloudwatch.putMetricAlarm(params, function(err, data) {
             if (err) 
-                console.log(err, err.stack);
+                deferred.reject(err);
             else {
                 console.log("Successfully created alarm of high Network in.");
                 deferred.resolve();
@@ -67,7 +67,7 @@
         };
         cloudwatch.putMetricAlarm(params, function(err, data) {
             if (err) 
-                console.log(err, err.stack);
+                deferred.reject(err);
             else {
                 console.log("Successfully created alarm of low Network in.");
                 deferred.resolve();

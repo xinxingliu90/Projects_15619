@@ -57,7 +57,7 @@
         };
         autoscaling.createLaunchConfiguration(params, function (err, data) {
             if (err) 
-                console.log(err, err.stack); // an error occurred
+                deferred.reject(err);
             else {
                 console.log("Successfully created Launch Configuration.");
                 deferred.resolve();
@@ -110,8 +110,9 @@
             ],
         };
         autoscaling.createAutoScalingGroup(params, function(err, data) {
-            if (err) 
-                console.log(err, err.stack); // an error occurred
+            if (err) {
+                deferred.reject(err);
+            }
             else  {
                 console.log("Successfully created ASG.");
                 console.log("Configuring Metrics for ASG starts...");
@@ -130,14 +131,12 @@
                 };
                 autoscaling.enableMetricsCollection(params, function(err, data) {
                     if (err) 
-                        console.log(err, err.stack); // an error occurred
+                        deferred.reject(err);
                     else {
                         console.log("Successfully configured Metrics for ASG.");
                         deferred.resolve();
                     }
                 });
-                // addPolicy('Increase Group Size', 2, 150, cloudwatch.addAlarmHighNetworkIn);
-                // addPolicy('Decrease Group Size', -2, 60, cloudwatch.addAlarmLowNetworkIn)
             }
         });
         return deferred.promise;
@@ -154,8 +153,10 @@
             Cooldown: cooldown
         };
         autoscaling.putScalingPolicy(params, function (err, data) {
-            if (err) 
-                console.log(err, err.stack); // an error occurred
+            if (err) {
+                console.log(err, err.stack);
+                deferred.reject(err);
+            }
             else {
                 console.log("Successfully added policy " + policyName + ":", data.PolicyARN);
                 deferred.resolve(data.PolicyARN);

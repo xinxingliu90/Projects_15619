@@ -38,7 +38,7 @@
     };
     elb.createLoadBalancer(params, function(err, data) {
       if (err) 
-        console.log(err, err.stack); // an error occurred
+        deferred.reject(err);
       else  {
         dns = data.DNSName;
         console.log("Successfully created ELB with DNS:", dns);
