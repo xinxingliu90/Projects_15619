@@ -1,6 +1,5 @@
 (function () {
   var request = require('request');
-  var sleep = require('sleep');
   var Q = require('q');
 
   var AWS = require('aws-sdk');

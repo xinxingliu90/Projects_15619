@@ -1,6 +1,5 @@
 (function () {
     var request = require('request');
-    var sleep = require('sleep');
     var Q = require('q');
 
     var AWS = require('aws-sdk');
@@ -8,7 +7,7 @@
 
     var ec2 = new AWS.EC2();
 
-    exports.launchInstance = function (imageId, instanceName) {
+    exports.createInstance = function (imageId, instanceName) {
         return runInstance(imageId, instanceName)
             .then(function (instanceId) {
                 return tagInstance(instanceId, instanceName);
@@ -57,8 +56,9 @@
             }
             else {
                 console.log("Waiting for instance " + instanceId, "to finish status check...");
-                sleep.sleep(300);
-                deferred.resolve(instanceId);
+                Q.delay(300000).then(function () {
+                    deferred.resolve(instanceId);
+                });
             }
         });
         return deferred.promise;

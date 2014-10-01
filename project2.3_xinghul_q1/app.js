@@ -3,6 +3,7 @@
     var sleep = require('sleep');
     var request = require('request');
     var fs = require('fs');
+    var Q = require('q');
 
     var ec2 = require('./services/ec2');
     var autoscaling = require('./services/autoscaling');
@@ -13,30 +14,10 @@
     var elbDNS = null;
     var testId = 'levi';
 
-
-    ec2.launchInstance('ami-562d853e', 'Load Generator')
-        .then(function (dns) {
-            generatorDNS = dns;
-        })
-    .then(elb.createELB)
-        .then(function (dns) {
-            elbDNS = dns;
-        })
-    .then(autoscaling.launchConfiguration)
-    .then(autoscaling.createAutoscalingGroup)
-    .then(function () {
-        return autoscaling.addPolicy('Increase Group Size', 2, 150);
-    })
-        .then(function (policyARN) {
-            cloudwatch.addAlarmHighNetworkIn(policyARN);
-        })
-    .then(function () {
-        return autoscaling.addPolicy('Decrease Group Size', -2, 60);
-    })
-        .then(function (policyARN) {
-            cloudwatch.addAlarmLowNetworkIn(policyARN);
-        })
-    .then(function () {
+    Q.all([ec2.createInstance('ami-562d853e', 'Load Generator'), elb.createELB(), autoscaling.createASG()])
+    .then(function (dns_result) {
+        generatorDNS = dns_result[0];
+        elbDNS = dns_result[1];
         warmUp(1);
     });
 

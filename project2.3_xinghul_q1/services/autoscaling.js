@@ -1,6 +1,5 @@
 (function () {
     var request = require('request');
-    var sleep = require('sleep');
     var Q = require('q');
     var cloudwatch = require('./cloudwatch');
 
@@ -9,7 +8,24 @@
 
     var autoscaling = new AWS.AutoScaling();
 
-    exports.launchConfiguration = function () {
+    exports.createASG = function () {
+        return launchConfiguration()
+        .then(createAutoscalingGroup)
+        .then(function () {
+            return addPolicy('Increase Group Size', 2, 150);
+        })
+            .then(function (policyARN) {
+                cloudwatch.addAlarmHighNetworkIn(policyARN);
+            })
+        .then(function () {
+            return addPolicy('Decrease Group Size', -2, 60);
+        })
+            .then(function (policyARN) {
+                cloudwatch.addAlarmLowNetworkIn(policyARN);
+            });
+    };
+
+    var launchConfiguration = function () {
         console.log("Create Launch Configuration starts...");
         var deferred = Q.defer();
         var params = {
@@ -50,7 +66,7 @@
         return deferred.promise;
     };
 
-    exports.describeConfiguration = function () {
+    var describeConfiguration = function () {
         var params = {
             LaunchConfigurationNames: [
                 LAUNCH_CONFIGURARION_NAME
@@ -64,7 +80,7 @@
         });
     };
 
-    exports.createAutoscalingGroup = function () {
+    var createAutoscalingGroup = function () {
         console.log("Create ASG starts...");
         var deferred = Q.defer();
         var params = {
@@ -127,7 +143,7 @@
         return deferred.promise;
     };
 
-    exports.addPolicy = function (policyName, scalingAdjustment, cooldown) {
+    var addPolicy = function (policyName, scalingAdjustment, cooldown) {
         console.log("Adding policy " + policyName + " starts...");
         var deferred = Q.defer();
         var params = {
