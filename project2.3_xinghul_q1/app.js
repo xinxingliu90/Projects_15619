@@ -19,6 +19,8 @@
         generatorDNS = dns_result[0];
         elbDNS = dns_result[1];
         warmUp(1);
+    }, function (reason) {
+        console.log("Error", reason);
     });
 
 
